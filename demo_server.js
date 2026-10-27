@@ -1109,12 +1109,6 @@ const HTML = `<!DOCTYPE html>
 
 </main>
 
-<!-- ===== FOOTER ===== -->
-<footer class="bg-slate-900/60 border-t border-slate-800/80 px-6 py-3 text-xs text-slate-500 flex flex-wrap justify-between items-center gap-2">
-  <span>Bangladesh National SSI Architecture · Privacy-Preserving DPKI System</span>
-  <span>Candidate: <strong>Md. Tanvir Islam</strong> · Supervisor: <strong>Prof. Muradul Bashir</strong></span>
-</footer>
-
 <!-- ─── SCRIPT ─── -->
 <script>
 // Global active credential cache
