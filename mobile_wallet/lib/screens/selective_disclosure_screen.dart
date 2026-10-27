@@ -181,6 +181,7 @@ class _SelectiveDisclosureScreenState
                 const SizedBox(height: 8),
                 DropdownButtonFormField<String>(
                   value: _selectedVerifier,
+                  isExpanded: true,
                   dropdownColor: const Color(0xFF1E293B),
                   style: const TextStyle(color: Colors.white, fontSize: 13),
                   decoration: InputDecoration(
@@ -196,7 +197,11 @@ class _SelectiveDisclosureScreenState
                   items: _verifiers.map((v) {
                     return DropdownMenuItem(
                       value: v,
-                      child: Text(v, overflow: TextOverflow.ellipsis),
+                      child: Text(
+                        v,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     );
                   }).toList(),
                   onChanged: (val) {
@@ -249,41 +254,45 @@ class _SelectiveDisclosureScreenState
                             : Colors.white.withOpacity(0.05),
                       ),
                     ),
-                    child: CheckboxListTile(
-                      value: isChecked,
-                      activeColor: const Color(0xFF10B981),
-                      title: Text(
-                        _attributeLabels[key]!,
-                        style: TextStyle(
-                          color: isChecked ? Colors.white : Colors.grey.shade400,
-                          fontSize: 13,
-                          fontWeight:
-                              isChecked ? FontWeight.w600 : FontWeight.normal,
+                    child: Material(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(10),
+                      child: CheckboxListTile(
+                        value: isChecked,
+                        activeColor: const Color(0xFF10B981),
+                        title: Text(
+                          _attributeLabels[key]!,
+                          style: TextStyle(
+                            color: isChecked ? Colors.white : Colors.grey.shade400,
+                            fontSize: 13,
+                            fontWeight:
+                                isChecked ? FontWeight.w600 : FontWeight.normal,
+                          ),
                         ),
-                      ),
-                      subtitle: Text(
-                        _attributeSubtitles[key]!,
-                        style: TextStyle(
+                        subtitle: Text(
+                          _attributeSubtitles[key]!,
+                          style: TextStyle(
+                            color: isChecked
+                                ? const Color(0xFF34D399).withOpacity(0.8)
+                                : Colors.grey.shade600,
+                            fontSize: 10,
+                          ),
+                        ),
+                        secondary: Icon(
+                          isChecked ? Icons.visibility : Icons.visibility_off,
                           color: isChecked
-                              ? const Color(0xFF34D399).withOpacity(0.8)
+                              ? const Color(0xFF34D399)
                               : Colors.grey.shade600,
-                          fontSize: 10,
+                          size: 20,
                         ),
+                        contentPadding:
+                            const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+                        onChanged: (val) {
+                          setState(() {
+                            _attributeToggles[key] = val ?? false;
+                          });
+                        },
                       ),
-                      secondary: Icon(
-                        isChecked ? Icons.visibility : Icons.visibility_off,
-                        color: isChecked
-                            ? const Color(0xFF34D399)
-                            : Colors.grey.shade600,
-                        size: 20,
-                      ),
-                      contentPadding:
-                          const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
-                      onChanged: (val) {
-                        setState(() {
-                          _attributeToggles[key] = val ?? false;
-                        });
-                      },
                     ),
                   );
                 }),
