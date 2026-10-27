@@ -20,7 +20,7 @@ class SelectiveDisclosureScreen extends StatefulWidget {
 
 class _SelectiveDisclosureScreenState
     extends State<SelectiveDisclosureScreen> {
-  String _selectedVerifier = 'Sonali Bank PLC';
+  String _selectedVerifier = 'Sonali Bank PLC (Bank Account KYC)';
   final List<String> _verifiers = [
     'Sonali Bank PLC (Bank Account KYC)',
     'Dhaka Medical College Hospital (Patient Triage)',
