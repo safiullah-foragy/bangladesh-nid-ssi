@@ -1,0 +1,33 @@
+{
+  "name": "bangladesh-nid-ssi",
+  "version": "1.0.0",
+  "description": "Privacy-Preserving Digital ID System for Bangladesh NID using DPKI, Selective Disclosure, and Guardian Recovery",
+  "main": "scripts/01_crypto_engine.js",
+  "scripts": {
+    "test:crypto": "node scripts/01_crypto_engine.js",
+    "test:benchmark": "hardhat run scripts/02_deploy_and_benchmark.js",
+    "test:all": "node scripts/01_crypto_engine.js && hardhat run scripts/02_deploy_and_benchmark.js",
+    "demo:cli": "node scripts/03_interactive_cli.js",
+    "demo:web": "node demo_server.js",
+    "compile": "hardhat compile"
+  },
+  "keywords": [
+    "ssi",
+    "did",
+    "zero-knowledge",
+    "selective-disclosure",
+    "dpki",
+    "solidity",
+    "hardhat",
+    "bangladesh-nid"
+  ],
+  "author": "Md. Tanvir Islam",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.11.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  }
+}
