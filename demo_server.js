@@ -37,7 +37,7 @@ const {
   deriveDID,
 } = require("./scripts/01_crypto_engine");
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // ---------------------------------------------------------------------------
 // Pre-Seed Initial Demo State: Populates complete, authentic demo data on startup

@@ -4,6 +4,7 @@
   "description": "Privacy-Preserving Digital ID System for Bangladesh NID using DPKI, Selective Disclosure, and Guardian Recovery",
   "main": "scripts/01_crypto_engine.js",
   "scripts": {
+    "start": "node demo_server.js",
     "test:crypto": "node scripts/01_crypto_engine.js",
     "test:benchmark": "hardhat run scripts/02_deploy_and_benchmark.js",
     "test:all": "node scripts/01_crypto_engine.js && hardhat run scripts/02_deploy_and_benchmark.js",
