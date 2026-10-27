@@ -134,27 +134,28 @@ class _SelectiveDisclosureScreenState
         children: [
           // Screen Title & Description
           const Text(
-            'SELECTIVE DISCLOSURE PROOFS',
+            'SELECTIVE DISCLOSURE',
             style: TextStyle(
               color: Color(0xFF10B981),
-              fontSize: 12,
+              fontSize: 11,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.0,
             ),
           ),
           const SizedBox(height: 4),
           const Text(
-            'Citizen-Controlled Privacy',
+            'Share Identity Proof',
             style: TextStyle(
               color: Colors.white,
               fontSize: 22,
               fontWeight: FontWeight.bold,
+              letterSpacing: -0.3,
             ),
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 4),
           Text(
-            'Select which attributes you want to disclose. Unchecked attributes remain mathematically hidden using salted HMAC commitments.',
-            style: TextStyle(color: Colors.grey.shade400, fontSize: 12),
+            'Select attributes to disclose. Unchecked data remains 100% hidden.',
+            style: TextStyle(color: Colors.grey.shade400, fontSize: 13),
           ),
 
           const SizedBox(height: 20),

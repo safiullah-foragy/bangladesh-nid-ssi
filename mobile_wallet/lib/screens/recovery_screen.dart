@@ -64,27 +64,28 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
         children: [
           // Header
           const Text(
-            'ON-CHAIN KEY RECOVERY',
+            'KEY RECOVERY',
             style: TextStyle(
               color: Color(0xFF10B981),
-              fontSize: 12,
+              fontSize: 11,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.0,
             ),
           ),
           const SizedBox(height: 4),
           const Text(
-            '2-of-3 Guardian Social Recovery',
+            'Guardian Social Recovery',
             style: TextStyle(
               color: Colors.white,
               fontSize: 22,
               fontWeight: FontWeight.bold,
+              letterSpacing: -0.3,
             ),
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 4),
           Text(
-            'If your phone is lost or reset, 2 out of 3 authorized guardians can vote on-chain to rotate your identity key to your new device without any centralized backdoors.',
-            style: TextStyle(color: Colors.grey.shade400, fontSize: 12),
+            'Recover identity on new devices via 2-of-3 guardian consensus.',
+            style: TextStyle(color: Colors.grey.shade400, fontSize: 13),
           ),
 
           const SizedBox(height: 20),
