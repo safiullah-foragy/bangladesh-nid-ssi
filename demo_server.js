@@ -558,7 +558,17 @@ async function apiReset(req, res) {
   json(res, 200, { success: true });
 }
 
+async function apiHealth(req, res) {
+  json(res, 200, {
+    status: "healthy",
+    service: "Bangladesh NID SSI Backend API",
+    version: "1.0.0",
+    timestamp: new Date().toISOString()
+  });
+}
+
 const ROUTES = {
+  "GET /api/health":          apiHealth,
   "POST /api/issue":          apiIssue,
   "POST /api/generate-proof": apiGenerateProof,
   "GET /api/verify":          apiVerify,
